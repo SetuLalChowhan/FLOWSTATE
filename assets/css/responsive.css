@@ -91,7 +91,7 @@
     width: 60%;
     height: 90%;
     max-width: 100%;
-}
+  }
 }
 
 /* large mobile devices */
@@ -127,11 +127,11 @@
     font-size: 36px;
     line-height: 50px;
   }
-    .footer-logo img {
+  .footer-logo img {
     width: 60%;
     height: 90%;
     max-width: 100%;
-}
+  }
 }
 
 /* mobile devices */
@@ -164,11 +164,17 @@
     margin-top: 20px;
     gap: 50px;
   }
-    .footer-logo img {
-    width: 80%;
+  .footer-logo img {
+    width: 63%;
     height: 100%;
     max-width: 100%;
-}
+  }
+  .focus-item {
+    display: flex;
+    align-items: start;
+    gap: 24px;
+    position: relative;
+  }
 }
 
 /* extra small devices */
@@ -193,9 +199,15 @@
     width: 200px;
     height: 50px;
   }
-    .footer-logo img {
-    width: 80%;
+  .footer-logo img {
+    width: 63%;
     height: 100%;
     max-width: 100%;
-}
+  }
+  .focus-item {
+    display: flex;
+    align-items: start;
+    gap: 24px;
+    position: relative;
+  }
 }
