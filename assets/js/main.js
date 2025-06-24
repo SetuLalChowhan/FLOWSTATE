@@ -14,11 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const languageSelector = document.querySelector(".language-selector");
 
   languageSelector.addEventListener("click", function () {
-    // Toggle between DE and EN
-    // const current = this.innerHTML.includes("DE</span>")
-    //   ? "EN</span>  |  DE"
-    //   : "DE</span>  |  EN";
-    // this.innerHTML = current;
+ 
   });
 });
 
