@@ -9,13 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
       header.classList.remove("scrolled");
     }
   });
-
-  // Optional: Add language toggle functionality
-  const languageSelector = document.querySelector(".language-selector");
-
-  languageSelector.addEventListener("click", function () {
- 
-  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -26,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "We Combine Top Legal Advice with Technology and Project Management Capabilities",
       subhead: "Legal Solutions to Unleash Your Full Potential",
       ctaButton: "Work with us",
+      serviceArea:
+        "Corporate Law | Restructurings | Mergers & Acquisitions | Joint Ventures | Venture Capital | Capital Markets Law | Legal Corporate/M&A as a Service",
       missionTitle: "Our Mission",
       missionStatement: "Providing Corporate Legal Advice in a State of Flow",
       focusItems: [
@@ -47,70 +42,78 @@ document.addEventListener("DOMContentLoaded", function () {
         {
           title: "Ease & Fulfilment",
           description:
-            "Our work itself becomes deeply satisfying and fulfilling. We enjoy the process.",
+            "We are convinced that deeply satisfying and fulfilling work provides the best possible results. We appreciate a structured process based on our longstanding transaction experience and every win along the way.",
         },
       ],
       footer: {
         imprint: "Imprint",
         address:
           "Flow State Rechtsanwaltsgesellschaft mbH<br />Bahnhofsstraße 2, 90402 Nuremberg",
+        email: "info@flowstate-law.de",
+        phoneNumber: "+49 911 47 88 27 55",
         commercialRegister: "Commercial Register: Local Court of Nuremberg",
+        registerNumber:"Commercial Register Number: HRB 99999 ",
         managingDirector: "Managing Director: Sebastian Seibold",
         vatNumber: "VAT Identification Number: DE999999999",
         barAssociation: "Bar association:",
         barAssociationName: "Bar Association of Nuremberg",
         barAssociationWebsite: "www.rak-nbg.de",
         barAssociationAddress: "Fuerther Str. 115, 90429 Nuremberg",
-        copyright: "Company",
+        copyright: "Flow State Rechtsanwaltsgesellschaft mbH 2025. All rights reserved",
       },
     },
     de: {
       headline:
-        "Wir kombinieren erstklassige Rechtsberatung mit Technologie und Projektmanagement",
-      subhead: "Rechtliche Lösungen, um Ihr volles Potenzial zu entfesseln",
-      ctaButton: "Arbeiten Sie mit uns",
+        "Wir vereinen erstklassige Rechtsberatung mit dem Einsatz von Technologie und Projektmanagement-Tools",
+      subhead:
+        "Entfalten Sie mit unseren rechtlichen Lösungen Ihr volles Potential",
+      ctaButton: "Zusammenarbeiten",
+      serviceArea:
+        "Gesellschaftsrecht | Umstrukturierungen | Mergers & Acquisitions | Joint Ventures | Venture Capital | Kapitalmarktrecht | Legal Corporate as a Service | Legal M&A as a Service",
       missionTitle: "Unsere Mission",
-      missionStatement: "Unternehmensrechtliche Beratung im Flow-Zustand",
+      missionStatement: `Unternehmensrechtliche Beratung im "Flow State"`,
       focusItems: [
         {
-          title: "Volle Konzentration",
+          title: "Volle Aufmerksamkeit",
           description:
-            "Wo wir vollständig in Ihr Rechtsprojekt vertieft und tief konzentriert sind",
+            "Wir konzentrieren uns voll uns ganz auf Ihr rechtliches Projekt.",
         },
         {
-          title: "Höchste Leistung",
+          title: "Hohe Leistungsfähigkeit",
           description:
-            "Durch die Balance zwischen Fähigkeiten und Herausforderungen erreichen wir Spitzenleistungen. Wir steigern Effizienz, Produktivität und Output erheblich. Lassen Sie uns Ihre Ziele in Rekordzeit erreichen.",
+            "Wir finden die richtige Balance zwischen Herausforderungen und unseren Fähigkeiten. Das schafft Raum für Spitzenleistungen. Wir steigern die Effizienz, die Produktivität und den Output. Lassen Sie uns gemeinsam Ihre Ziele in Rekordzeit erreichen.",
         },
         {
-          title: "Kreation & Innovation",
-          description:
-            "Völlig in der Aufgabe versunken, erschließen wir unser kreatives Potenzial. Wir wandeln Herausforderungen in Innovationen und Chancen um.",
+          title: "Gestaltung & Innovation",
+          description: `Im "Flow State" schöpfen wir unser kreatives Potenzial aus und verwandeln Herausforderungen in Chancen und Innovation.`,
         },
         {
           title: "Leichtigkeit & Erfüllung",
           description:
-            "Unsere Arbeit selbst wird zutiefst befriedigend und erfüllend. Wir genießen den Prozess.",
+            "Wir sind davon überzeugt, dass eine erfüllende Arbeit zu den bestmöglichen Ergebnissen führt. Wir schätzen strukturierte Prozesse, die auf unserer langjährigen Transaktionserfahrung basieren, und jeden Erfolg auf dem Weg zum Ziel.",
         },
       ],
       footer: {
         imprint: "Impressum",
         address:
-          "Flow State Rechtsanwaltsgesellschaft mbH<br />Bahnhofsstraße 2, 90402 Nürnberg",
+          "Flow State Rechtsanwaltsgesellschaft mbH Bahnhofstraße 2, 90402 Nürnberg",
+        email: "info@flowstate-law.de",
+        phoneNumber: "+49 911 47 88 27 55",
         commercialRegister: "Handelsregister: Amtsgericht Nürnberg",
-        managingDirector: "Geschäftsführer: Sebastian Seibold",
-        vatNumber: "Umsatzsteuer-Identifikationsnummer: DE999999999",
-        barAssociation: "Rechtsanwaltskammer:",
+        registerNumber: "Registernummer: HRB 99999",
+        managingDirector: "Geschäftsführer: Sebastian Seibold ",
+        vatNumber: "Umsatzsteuer-Identifikationsnummer: DE999999999 ",
+        barAssociation: "Zuständige Rechtsanwaltskammer:",
         barAssociationName: "Rechtsanwaltskammer Nürnberg",
         barAssociationWebsite: "www.rak-nbg.de",
         barAssociationAddress: "Fürther Str. 115, 90429 Nürnberg",
-        copyright: "Unternehmen",
+        copyright: "Flow State Rechtsanwaltsgesellschaft mbH 2025. Alle Rechte sind vorbehalten.",
       },
     },
   };
 
-  // Set default language
-  let currentLanguage = "en";
+  // Get language from localStorage or default to 'en'
+  let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
 
   // Get language elements
   const deOption = document.querySelector('[data-lang="de"]');
@@ -139,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("headline").textContent = data.headline;
     document.getElementById("subhead").textContent = data.subhead;
     document.getElementById("ctaButton").textContent = data.ctaButton;
+    document.getElementById("serviceArea").textContent = data.serviceArea;
 
     // Update mission section
     document.querySelector(".mission-title").textContent = data.missionTitle;
@@ -157,8 +161,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".footer-title").textContent = data.footer.imprint;
     document.querySelectorAll(".footer-text")[0].innerHTML =
       data.footer.address;
+    document.getElementById("email").textContent = data.footer.email;
+    document.getElementById("phone-number").textContent =
+      data.footer.phoneNumber;
     document.querySelectorAll(".footer-text")[1].textContent =
       data.footer.commercialRegister;
+    if (data.footer.registerNumber) {
+      document.getElementById("register-number").textContent = data.footer.registerNumber;
+    }
     document.querySelectorAll(".footer-text")[2].textContent =
       data.footer.managingDirector;
     document.querySelectorAll(".footer-text")[3].textContent =
@@ -174,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".copyright").textContent = data.footer.copyright;
   }
 
-  // Initialize with default language
+  // Initialize with saved language
   updateLanguageDisplay(currentLanguage);
   updateContent(currentLanguage);
 
@@ -182,18 +192,24 @@ document.addEventListener("DOMContentLoaded", function () {
   deOption.addEventListener("click", function () {
     if (currentLanguage !== "de") {
       currentLanguage = "de";
+      localStorage.setItem('selectedLanguage', currentLanguage);
       updateLanguageDisplay(currentLanguage);
       updateContent(currentLanguage);
-      AOS.refresh();
+      if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+      }
     }
   });
 
   enOption.addEventListener("click", function () {
     if (currentLanguage !== "en") {
       currentLanguage = "en";
+      localStorage.setItem('selectedLanguage', currentLanguage);
       updateLanguageDisplay(currentLanguage);
       updateContent(currentLanguage);
-      AOS.refresh();
+      if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+      }
     }
   });
 });

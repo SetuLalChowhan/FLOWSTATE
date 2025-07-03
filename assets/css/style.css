@@ -714,3 +714,15 @@ footer {
   color: black;
   opacity: 0.7;
 }
+
+#email {
+  color: white;
+}
+
+#phone-number {
+  color: white;
+}
+
+#register-number{
+  color: white;
+}
